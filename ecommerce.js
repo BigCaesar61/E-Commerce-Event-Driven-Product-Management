@@ -5,6 +5,7 @@ const modelSelector = document.getElementById('model-selector');
 const purchaseButton = document.getElementById('purchase-button');
 
 modelSelector.addEventListener('change', function(event) {
+    const selectedOption = modelSelector.options[modelSelector.selectedIndex];
     const selectedPrice = event.target.value;
     priceElement.textContent = `$${selectedPrice}`;
 });
@@ -12,12 +13,6 @@ modelSelector.addEventListener('change', function(event) {
 //above code dynamically changes the price when the user selects the model of gaming laptop
 
 //Task 3: Handle Stock Availability
-
-const stockStatus = {
-    1100: 'in',
-    1500: 'out',
-    2000: 'in'
-};
 
 //updating purchase button based on stock availability
 
