@@ -27,3 +27,16 @@ if (stock === 'out') {
 } else {
     purchaseButton.disabled = false;
 }
+
+//Task 4: Create a Checkout Event
+
+purchaseButton.addEventListener('click', function() {
+    const selectedOption = modelSelector.options[modelSelector.selectedIndex];
+    const stock = selectedOption.getAttribute('data-stock');
+
+    if (stock === 'in') {
+        alert('Thank you for your purchase');
+    } else {
+        alert('Sorry item is out of stock and can not be purchased');
+    }
+});
